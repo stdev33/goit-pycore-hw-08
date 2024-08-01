@@ -1,6 +1,7 @@
 from .helpers import input_error
 from .record import Record
 from .addressbook import AddressBook
+from .helpers import save_data
 
 
 @input_error
@@ -79,6 +80,7 @@ def hello():
     return "How can I help you?"
 
 
-def exit_bot():
+def exit_bot(book):
     print("Good bye!")
+    save_data(book)
     exit()
